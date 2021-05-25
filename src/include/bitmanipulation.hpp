@@ -46,6 +46,7 @@ template <class T>
 /**
  * Returns the number of set bits in the given value.
  * E.g. count_bits_set(0b11) = 2
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto count_bits_set(T value) -> unsigned
@@ -63,6 +64,7 @@ template <class T>
 /**
  * Returns the number of leading zeroes in the given value.
  * E.g. leading_zeroes_count(0b00001111) = 4
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto leading_zeroes_count(const T value) -> unsigned
@@ -90,6 +92,7 @@ template <class T>
 /**
  * Returns the number of trailing zeroes in the given value.
  * E.g. trailing_zeroes_count(0b1100) = 2
+ * @param value the given value
  */
 template <class T>
 constexpr auto trailing_zeroes_count(const T value) -> unsigned
@@ -117,6 +120,7 @@ template <class T>
 /**
  * Isolates the lowest clear bit in the given value.
  * E.g. isolate_lowest_clear_bit(0b11100011) = 0b11111011
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto isolate_lowest_clear_bit(const T value) -> T
@@ -130,6 +134,7 @@ template <class T>
 /**
  * Isolates the lowest set bit in the given value.
  * E.g. isolate_lowest_set_bit(0b11100011) = 0b00000001
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto isolate_lowest_set_bit(const T value) -> T
@@ -143,6 +148,7 @@ template <class T>
 /**
  * Clears all set bits to the right of the first clear bit in the given value.
  * E.g. fill_from_lowest_clear_bit(0b11101011) = 0b11101000
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto fill_from_lowest_clear_bit(const T value) -> T
@@ -159,6 +165,7 @@ template <class T>
 /**
  * Sets all clear bits to the right of the first set bit in the given value.
  * E.g. fill_from_lowest_set_bit(0b01110100) = 0b01110111
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto fill_from_lowest_set_bit(const T value) -> T
@@ -175,6 +182,7 @@ template <class T>
 /**
  * Clears the lowest set bit in the given value.
  * E.g. clear_lowest_set_bit(0b11100010) = 0b11100000
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto clear_lowest_set_bit(const T value) -> T
@@ -188,6 +196,7 @@ template <class T>
 /**
  * Sets the lowest clear bit in the given value.
  * E.g. set_lowest_clear_bit(0b11100011) = 0b11100111
+ * @param value the given value
  */
 template <class T>
 [[nodiscard]] constexpr auto set_lowest_clear_bit(const T value) -> T
