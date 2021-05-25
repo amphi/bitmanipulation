@@ -51,7 +51,7 @@ template <class T>
 template <class T>
 [[nodiscard]] constexpr auto count_bits_set(T value) -> unsigned
 {
-    unsigned count { 0u };
+    unsigned count { 0U };
     for (; value; count++) {
         value = value & static_cast<T>(value - 1);
     }
@@ -73,7 +73,7 @@ template <class T>
         return sizeof(value) * CHAR_BIT;
     }
 
-    unsigned       count {                       0u };
+    unsigned       count {                       0U };
     const unsigned len   { sizeof(value) * CHAR_BIT };
 
     for (unsigned i = 1; i <= len; i++) {
@@ -101,7 +101,7 @@ constexpr auto trailing_zeroes_count(const T value) -> unsigned
         return sizeof(value) * CHAR_BIT;
     }
 
-    unsigned       count {                       0u };
+    unsigned       count {                       0U };
     const unsigned len   { sizeof(value) * CHAR_BIT };
 
     for (unsigned i = 0; i < len; i++) {
