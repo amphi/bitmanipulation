@@ -6,8 +6,8 @@ if(ENABLE_CLANG_TIDY)
     if(CLANGTIDY)
         set(CMAKE_CXX_CLANG_TIDY
             ${CLANGTIDY}
-            -header-filter=src/
-            -checks=cppcoreguidelines-*,misc-*,modernize-*,performance-*,readability-*,
+            -header-filter=.*
+            -checks=cppcoreguidelines-*,misc-*,modernize-*,performance-*,readability-*
             -extra-arg=-Wno-unknown-warning-option)
         message(STATUS "Enabling static analysis using clang-tidy.")
     else()

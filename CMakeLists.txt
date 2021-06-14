@@ -1,24 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
 
-# most of this is taken from github.com/lefticus/cpp_starter_project
-
 # Set the project name and include standard settings
-project(my_cpp_project CXX)
-include(cmake/StandardProjectSettings.cmake)
+project(bitmanipulation CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED true)
 
-# Link this 'library' to set the c++ standard / compile-time options requested
-add_library(project_options INTERFACE)
-target_compile_features(project_options INTERFACE cxx_std_17)
-
-# standard compiler warnings
-include(cmake/CompilerWarnings.cmake)
-
-# Link this 'library' to use the warnings specified in CompilerWarnings.cmake
-add_library(project_warnings INTERFACE)
-set_default_project_warnings(project_warnings)
-
-# include static analysis
-include(cmake/StaticAnalysis.cmake)
+include(cmake/StandardProjectSettings.cmake) # set the build type (default: 'debug')
+include(cmake/CompilerWarnings.cmake)        # set compiler warnings
+include(cmake/StaticAnalysis.cmake)          # include static analysis
 
 add_subdirectory(src)
 
